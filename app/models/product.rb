@@ -14,4 +14,8 @@ class Product < ActiveRecord::Base
     too_short: "too short, the minimun is 10 characters."
   } 
 
+  def self.latest
+    Product.order(:updated_at).last
+  end
+
 end
