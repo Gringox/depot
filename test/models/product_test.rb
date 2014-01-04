@@ -79,7 +79,7 @@ class ProductTest < ActiveSupport::TestCase
                           image_url:   "pedro.png")
     
     assert product.invalid?
-    assert_equal ["is too short (minimum is 10 characters)"], product.errors[:title]
+    assert_equal ["too short, the minimun is 10 characters."], product.errors[:title]
   end
 
 end
