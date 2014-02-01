@@ -17,3 +17,4 @@ Things you may want to cover:
 
 * Deployment instructions: run <tt>rails server</tt> for WEBrick running on port 3000
 
+* Deployment with Apache2 coming soon...
