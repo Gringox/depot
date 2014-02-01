@@ -1,28 +1,19 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
+This README document show whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: <tt>ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-linux]</tt>
 
-* System dependencies
+* Configuration: run <tt>bundle install</tt>
 
-* Configuration
+* Database creation: run <tt>rake db:migrate</tt>
 
-* Database creation
+* Database initialization: run <tt>rake db:seed</tt>
 
-* Database initialization
+* How to run the test suite: run <tt>rake test</tt>
 
-* How to run the test suite
+* Deployment instructions: run <tt>rails server</tt> for WEBrick running on port 3000
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
