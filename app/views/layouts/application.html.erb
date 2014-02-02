@@ -14,6 +14,12 @@
   </div>
   <div id="columns">
     <div id="side">
+      <ul>
+        <li><a href="<%= store_url %>">Home</a></li>
+        <li><a href="<%= store_url %>">Questions</a></li>
+        <li><a href="<%= store_url %>">News</a></li>
+        <li><a href="<%= store_url %>">Contact</a></li>
+      </ul>
       <div id="cart">
         <% if @cart %>
           <!-- #hidden_div_if(@cart.line_items.empty?, id: 'cart') do -->
@@ -21,12 +27,6 @@
           <!--  #end -->
         <% end %>
       </div>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Questions</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
     </div>
     <div id="main">
       <%= yield %>
