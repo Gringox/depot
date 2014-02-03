@@ -13,7 +13,7 @@ Depot::Application.configure do
     domain: "debian",
     authentication: "plain",
     user_name: "ati.students.mail@gmail.com",
-    password: "",
+    password: "hfngegkynmhrjrtq",
     enable_starttls_auto: true
   }
 
