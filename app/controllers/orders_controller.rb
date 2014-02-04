@@ -40,6 +40,10 @@ class OrdersController < ApplicationController
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         OrderNotifier.received(@order).deliver
+
+        if not @order.shipping_date_was.nil?
+          OrderNotifier.shipped(@order).deliver
+        end
 		
         format.html { redirect_to store_url, notice: 
           'Thank you for your order.' }
@@ -59,6 +63,11 @@ class OrdersController < ApplicationController
   def update
     respond_to do |format|
       if @order.update(order_params)
+
+        if not @order.shipping_date_was.nil?
+          OrderNotifier.shipped(@order).deliver
+        end
+
         format.html { redirect_to @order, notice: 'Order was successfully updated.' }
         format.json { head :no_content }
       else
@@ -86,6 +95,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:name, :address, :email, :pay_type)
+      params.require(:order).permit(:name, :address, :email, :pay_type, :shipping_date)
     end
 end

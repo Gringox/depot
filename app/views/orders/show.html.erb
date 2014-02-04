@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<!--<p>
   <strong>Name:</strong>
-  <%= @order.name %>
-</p>
+#  <%= @order.name %>
+</p>-->
 
 <p>
   <strong>Address:</strong>
@@ -18,6 +18,11 @@
 <p>
   <strong>Pay type:</strong>
   <%= @order.pay_type %>
+</p>
+
+<p>
+  <p><strong>Shipping Date:</strong></p>
+  <%= @order.shipping_date %>
 </p>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
