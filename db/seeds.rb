@@ -27,7 +27,7 @@ Product.create!(title: 'CoffeeScript',
      },
   image_url:   'cs.jpg',    
   price: 36.00)
-# . . .
+####
 Product.create!(title: 'Programming Ruby 1.9 & 2.0',
   description:
     %{
@@ -37,8 +37,7 @@ Product.create!(title: 'Programming Ruby 1.9 & 2.0',
      },
   image_url: 'ruby.jpg',
   price: 49.95)
-# . . .
-
+####
 Product.create!(title: 'Rails Test Prescriptions',
   description: 
     %{
@@ -51,3 +50,22 @@ Product.create!(title: 'Rails Test Prescriptions',
      },
   image_url: 'rtp.jpg',
   price: 34.95)
+####
+####
+User.delete_all
+####
+User.create!(name: 'gringo',
+  password: "secret",
+  password_confirmation: "secret",
+)
+####
+User.create!(name: 'andresz',
+  password: "secret",
+  password_confirmation: "secret",
+)
+####
+User.create!(name: 'reconshot',
+  password: "secret",
+  password_confirmation: "secret",
+)
+####
